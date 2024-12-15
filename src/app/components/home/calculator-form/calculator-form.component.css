@@ -1,0 +1,44 @@
+.form_container {
+    padding: 20px 40px;
+}
+
+.form_inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 15px;
+}
+
+.form_inputs input {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
+
+.form_container input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form_inputs button {
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 5px;
+    background-color: #0071a9;
+}
+
+.form_container .total_cost {
+    color: #fff;
+}

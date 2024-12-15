@@ -1,0 +1,25 @@
+<div class="form_container">
+    <div class="form_inputs">
+        <input
+            type="number"
+            [(ngModel)]="numberOfPeople"
+            placeholder="No of people"
+            min="0"
+            name="numberOfPeople"
+            (input)="validateInput('numberOfPeople')"
+        />
+        <input
+            type="number"
+            [(ngModel)]="breadCostPerKilo"
+            placeholder="Bread cost in € (per kilo)"
+            min="0"
+            name="breadCostPerKilo"
+            (input)="validateInput('breadCostPerKilo')"
+        />
+      
+        <button (click)="calculate()">Calculate</button>
+    </div>
+    <div *ngIf="totalCost !== null" class="total_cost">
+        <p>Total Cost: {{ totalCost }}€</p>
+    </div>
+</div>
