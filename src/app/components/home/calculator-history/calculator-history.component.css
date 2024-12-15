@@ -2,14 +2,26 @@
     padding: 0px 40px 20px 40px;
 }
 
+.history_container h4 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    opacity: 0.8;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.table_wrapper {
+    max-height: 450px;
+    overflow: auto;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 15px;
+}
+
 .history_table {
     width: 100%;
     border-collapse: collapse;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 15px;  
-    overflow: hidden;
     background-color: #fff;
-    border-radius: 5px;
     font-size: 18px;
 }
   
@@ -18,17 +30,17 @@
     border-bottom: 1px solid #ddd;
     padding: 10px;
     text-align: center;
-}
-
-.history_table th {
-    background-color: #f4f4f4;
+    white-space: nowrap;
 }
 
 .history_table thead {
-    border-radius: 5px;
+    position: sticky;
+    top: 0;
+    background-color: #0071a9;
+    color: #ffffffcf;
+    z-index: 1;
 }
 
-.history_table thead th {
-    border-bottom: 2px solid #000;
+::-webkit-scrollbar {
+    display: none;
 }
-  

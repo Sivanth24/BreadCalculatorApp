@@ -1,5 +1,5 @@
 <div class="form_container">
-    <div class="form_inputs">
+    <div class="form_inputs" [ngStyle]="{'border-radius': totalCost !== null ? '8px 8px 0px 0px' : '8px'}">
         <input
             type="number"
             [(ngModel)]="numberOfPeople"
@@ -17,7 +17,7 @@
             (input)="validateInput('breadCostPerKilo')"
         />
       
-        <button (click)="calculate()">Calculate</button>
+        <button (click)="calculate()" [disabled]="disableButton">Calculate</button>
     </div>
     <div *ngIf="totalCost !== null" class="total_cost">
         <p>Total Cost: {{ totalCost }}€</p>

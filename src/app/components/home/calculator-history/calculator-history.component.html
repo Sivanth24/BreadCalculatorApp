@@ -1,19 +1,24 @@
-<div class="history_container">
-  <table *ngIf="globalState.calculationHistory().length > 0" class="history_table">
-      <thead>
-        <tr>
-          <th>No of People</th>
-          <th>Bread Price in € (per kilo)</th>
-          <th>Total Cost in €</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let record of globalState.calculationHistory()">
-          <td>{{ record.people }}</td>
-          <td>{{ record.breadCost }}</td>
-          <td>{{ record.totalCost }}</td>
-        </tr>
-      </tbody>
-  </table>
+<div *ngIf="globalState.calculationHistory().length > 0" class="history_container">
+  <h4>Recent history</h4>
+  <div class="table_wrapper">
+    <table class="history_table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>No of People</th>
+            <th>Bread Price in € (per kilo)</th>
+            <th>Total Cost in €</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let record of globalState.calculationHistory()">
+            <td>{{ record.id }}</td>
+            <td>{{ record.people }}</td>
+            <td>{{ record.breadCost }}</td>
+            <td>{{ record.totalCost }}</td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
 </div>
   

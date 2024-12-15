@@ -1,18 +1,30 @@
 import { Injectable, signal } from '@angular/core';
 
+export interface CalculationRecord { 
+  id: number; 
+  people: number; 
+  breadCost: number; 
+  totalCost: number 
+}
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class GlobalStateService {
 
   constructor() { }
 
-  calculationHistory = signal<{ people: number; breadCost: number; totalCost: number }[]>([]);
+  calculationHistory = signal<CalculationRecord[]>([]);
 
-  addCalculationRecord(people: number, breadCost: number, totalCost: number) {
+  addCalculationRecord(record: CalculationRecord) {
     this.calculationHistory.update((history) => [
       ...history,
-      { people, breadCost, totalCost },
+      record,
     ]);
+  }
+
+  clearRecords() {
+    this.calculationHistory.update(() => []);
   }
 }

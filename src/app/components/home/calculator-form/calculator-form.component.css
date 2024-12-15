@@ -9,7 +9,6 @@
     padding: 20px;
     gap: 30px;
     background-color: #fff;
-    border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 15px;
 }
 
@@ -17,7 +16,7 @@
     width: 100%;
     padding: 10px;
     font-size: 15px;
-    border-radius: 5px;
+    border-radius: 8px;
     border: 1px solid gray;
     box-sizing: border-box;
 }
@@ -31,7 +30,7 @@ input::-webkit-inner-spin-button {
 .form_inputs button {
     padding: 10px 20px;
     font-size: 15px;
-    border-radius: 5px;
+    border-radius: 8px;
     color: #fff;
     cursor: pointer;
     border: none;
@@ -41,4 +40,17 @@ input::-webkit-inner-spin-button {
 
 .form_container .total_cost {
     color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+    background-color: #0071a9;
+    border-radius: 0px 0px 8px 8px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 650px) {
+    .form_inputs {
+        flex-wrap: wrap;
+    }
 }
