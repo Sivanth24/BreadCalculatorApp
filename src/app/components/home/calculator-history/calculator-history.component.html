@@ -6,7 +6,7 @@
           <tr>
             <th>Id</th>
             <th>No of People</th>
-            <th>Bread Price in € (per kilo)</th>
+            <th>Bread Price (per kilo)</th>
             <th>Total Cost in €</th>
           </tr>
         </thead>
@@ -14,8 +14,8 @@
           <tr *ngFor="let record of globalState.calculationHistory()">
             <td>{{ record.id }}</td>
             <td>{{ record.people }}</td>
-            <td>{{ record.breadCost }}</td>
-            <td>{{ record.totalCost }}</td>
+            <td>{{ record.breadCost | currency: 'EUR' }}</td>
+            <td>{{ record.totalCost | currency: 'EUR' }}</td>
           </tr>
         </tbody>
     </table>

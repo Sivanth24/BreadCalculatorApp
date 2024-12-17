@@ -11,7 +11,7 @@
         <input
             type="number"
             [(ngModel)]="breadCostPerKilo"
-            placeholder="Bread cost in € (per kilo)"
+            placeholder="Bread cost (per kilo)"
             min="0"
             name="breadCostPerKilo"
             (input)="validateInput('breadCostPerKilo')"
@@ -20,6 +20,6 @@
         <button (click)="calculate()" [disabled]="disableButton">Calculate</button>
     </div>
     <div *ngIf="totalCost !== null" class="total_cost">
-        <p>Total Cost: {{ totalCost }}€</p>
+        <p>Total Cost: {{ totalCost | currency: 'EUR' }}</p>
     </div>
 </div>
